@@ -1,6 +1,6 @@
 ---
 - name: This sets up an httpd webserver
-  hosts: docker-host-ip.local
+  hosts: apache
   tasks:
   - name: Install the httpd rpm
     yum: name=httpd
