@@ -1,3 +1,5 @@
 #!/bin/bash
 
-systemctl start apache2
+cd /opt
+ansible-playbook apache.yml
+#systemctl start apache2
