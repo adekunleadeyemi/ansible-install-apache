@@ -13,6 +13,10 @@ COPY hosts /opt
 COPY apache.yml /opt
 COPY docker-entrypoint.sh /opt
 
+RUN chmod 777 /opt/docker-entrypoint.sh
+
+RUN a
+
 EXPOSE 8080
 
 ENTRYPOINT ["/opt/docker-entrypoint.sh"]
