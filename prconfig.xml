@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project xmlns:ac="ac:/antcontrib.org" xmlns:pega="pega:/pega.com" default="help" name="prpcUtils">
+
+	<property name="pega.jdbc.driver.jar" value="/opt/app/docker/volumes/NewPega/_data/lib/ojdbc7.jar"/>
+
+	<property name="pega.jdbc.driver.class" value="oracle.jdbc.OracleDriver"/>
+
+	<property name="pega.database.type" value="oracledate"/>
+
+	<property name="pega.jdbc.url" value="jdbc:oracle:thin:@//10.104.140.30:1521/ppega11"/>
+	
+	<property name="pega.jdbc.username" value="$db_user"/> <!-- Username for the db you want to import from or export to. But it will be better to use admin accounts for both "PRPC_ADMIN" -->
+	
+	<property name="pega.jdbc.password" value="$db_pswd"/> <!-- password for the db you want to import from or export to. But it will be better to use admin accounts for both "PRPC_ADMIN" -->
+	
+	<property name="rules.schema.name" value="$db_rules_schema"/>  <!-- Rules schema from where to import from or export to. Usually "PRPC_RULES" -->
+
+	<property name="data.schema.name" value="$db_data_schema"/>    <!-- Data schema from where to import from or export to. Usually "PRPC_DATA" -->
+	
+<!-- For import. This is for importing a file from a particular location to  -->
+	<property name="import.archive.path" value="/opt/app/docker/volumes/NewPega/_data/work/tomcat-tga-8002-engine/localhost/prtga-2.0/StaticContent/global/ServiceExport"/> <!-- This can be nexus url as well as thats where the updated ruleset will come from -->
+	<property name="import.mode" value="$Import_mode"/>  <!-- we can use  either, default (import), or install or hotfix -->
+	<property name="import.codeset.name" value="$Ruleset_name"/>
+	<property name="import.codeset.version" value="$Ruleset_version"/>
+	<property name="import.existing.instances" value="$value"/> <!-- either skip or override values -->
+	
+<!-- Optional properties -->
+	<property name="import.nofailonerror" value="$Value"/> <!-- True or False -->
+	<property name="import.compile.libraries" value="$Value"/> <!-- True or false -->
+	<property name="import.commit.count" value=""/> 
+	<property name="import.mode" value=""/>
+	<property name="import.mode" value=""/>
+	
+
+
+
+</project>
